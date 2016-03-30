@@ -1,4 +1,11 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in raindar.gemspec
-gemspec
+gem "httparty"
+gem "imgur-api"
+gem "lita"
+gem "redis"
+
+group :development, :test do
+  gem "pry"
+  gem "rspec"
+end
