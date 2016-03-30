@@ -1,2 +1,4 @@
-$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
-require 'raindar'
+require "lita-raindar"
+require "lita/rspec"
+
+Lita.version_3_compatibility_mode = false
