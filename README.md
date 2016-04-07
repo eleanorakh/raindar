@@ -30,56 +30,56 @@ lita weather LOCATION
 Locations are:
 
 ```
-Melbourne
-Bairnsdale
-Mildura
-Yarrawonga
-Canberra
-Sydney
-Grafton
-Newcastle
-Moree
-Namoi
-Wagga Wagga
-Wollongong
-Brisbane
-Bowen
-Cairns
-Emerald
-Gladstone
-Gulf of Carpentaria
-Gympie
-Longreach
-Mackay
-Mount Isa
-Townsville
-Warrego
-Weipa
-Willis Island
-Perth
+Adelaide
 Albany
+Alice Springs
+Bairnsdale
+Bowen
+Brisbane
 Broome
+Cairns
+Canberra
 Carnarvon
+Ceduna
 Dampier
+Darwin
+Emerald
 Esperance
 Geraldton
 Giles
-Halls creek
-Kalgoorlie
-Learmonth
-Port Headland
-Wyndham
-Hobart
-West Takone
-Adelaide
-Ceduna
-Mt Gambier
-Woomera
-Darwin
-Alice Springs
+Gladstone
 Gove
+Grafton
+Gulf of Carpentaria
+Gympie
+Halls Creek
+Hobart
+Kalgoorlie
 Katherine
+Learmonth
+Longreach
+Mackay
+Melbourne
+Mildura
+Moree
+Mount Isa
+Mt Gambier
+Namoi
+Newcastle
+Perth
+Port Headland
+Sydney
+Townsville
+Wagga Wagga
+Warrego
 Warruwi
+Weipa
+West Takone
+Willis Island
+Wollongong
+Woomera
+Wyndham
+Yarrawonga
 ```
 
 ## Contributing
