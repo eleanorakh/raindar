@@ -1,6 +1,7 @@
 # Raindar
 
-This is a lita plugin that responds to the users request of 'weather LOCATION' with a GIF of the most recent radar images compiled into a GIF. This is only available in Australia from radar locations specified on Bureau of Meteorology.
+This gem is a plugin for Lita, a customisable chatbot. To install Lita in your chat room, visit [Lita](https://www.lita.io/).
+Raindar is specific to Australia - the chatbot responds to a users request of 'weather LOCATION' with a GIF of the most recent radar from the Bureau of Meteorology. It is responsive to all locations in Australia that have a radar listed on the BOM website.
 
 ## Installation
 
@@ -20,13 +21,66 @@ Or install it yourself as:
 
 ## Usage
 
-Once the gem is installed, pop into slack and check the weather out!
+Once the gem is installed, the commands are as follows. Note that `lita` is used as an example. This will be your specific robot name
 
-## Development
+```
+lita weather LOCATION
+```
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+Locations are:
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+```
+Melbourne
+Bairnsdale
+Mildura
+Yarrawonga
+Canberra
+Sydney
+Grafton
+Newcastle
+Moree
+Namoi
+Wagga Wagga
+Wollongong
+Brisbane
+Bowen
+Cairns
+Emerald
+Gladstone
+Gulf of Carpentaria
+Gympie
+Longreach
+Mackay
+Mount Isa
+Townsville
+Warrego
+Weipa
+Willis Island
+Perth
+Albany
+Broome
+Carnarvon
+Dampier
+Esperance
+Geraldton
+Giles
+Halls creek
+Kalgoorlie
+Learmonth
+Port Headland
+Wyndham
+Hobart
+West Takone
+Adelaide
+Ceduna
+Mt Gambier
+Woomera
+Darwin
+Alice Springs
+Gove
+Katherine
+Warruwi
+```
 
 ## Contributing
 
