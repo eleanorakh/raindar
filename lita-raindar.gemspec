@@ -6,8 +6,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Eleanor Kiefel Haggerty"]
   spec.email         = ["eleanorakh@gmail.com"]
 
-  spec.summary       = %q{A slackbot that posts a GIF of the most recent weather radar of a given location in Australia}
-  spec.description   = %q{Response is limited to locations around Australia that have a radar}
+  spec.summary       = %q{A lita plugin that responds to requests to check the weather in Australia}
+  spec.description   = %q{Lita chatbot reponds to user requests of 'weather LOCATION' with a GIF of the weather in specified location. Response is limited to Australian locations with a radar listed on the Bureau of Meteorology}
   spec.homepage      = "https://github.com/eleanorakh/raindar.git"
   spec.license       = "MIT"
 
