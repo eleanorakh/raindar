@@ -67,9 +67,15 @@ module Lita
         if code.nil?
           response.reply("Location not currently available")
         else
-          response.reply(UrlCache.cached_radar_url(code))
+          response.reply(url_cache.cached_radar_url(code))
         end
 
+      end
+
+      private
+
+      def url_cache
+        UrlCache.new(redis)
       end
 
       Lita.register_handler(self)
