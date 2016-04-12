@@ -4,6 +4,7 @@ require_relative "url_cache"
 module Lita
   module Handlers
     class Raindar < Handler
+      config :imgur_api_key
 
       route(/^weather ([a-zA-Z0-9\s]*)$/i, :radar, command: true, help: { "weather LOCATION" => "Returns GIF of recent weather radar" })
 
