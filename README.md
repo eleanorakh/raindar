@@ -19,9 +19,15 @@ Or install it yourself as:
 
     $ gem install raindar
 
+## Configuration
+
+In `lita_config.rb`, it is necessary to set an `imgur_api_key`:
+
+    $ config.handlers.raindar.imgur_api_key = ENV["IMGUR_API_KEY"]
+
 ## Usage
 
-Once the gem is installed, the commands are as follows. Note that `lita` is used as an example. This will be your specific robot name
+Once the gem is installed and `imgur_api_key` set, the commands are as follows. Note that `lita` is used as an example. This will be your specific robot name
 
 ```
 lita weather LOCATION
