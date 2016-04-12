@@ -1,7 +1,6 @@
 require 'imgur'
 
 class ImgurGateway
-  IMGUR_API_KEY = ENV['IMGUR_API_KEY']
 
   attr_accessor :filename, :title, :url
 
@@ -12,7 +11,7 @@ class ImgurGateway
 
   def upload
     return false unless filename
-    client = Imgur.new(IMGUR_API_KEY)
+    client = Imgur.new(imgur_api_key)
     image = Imgur::LocalImage.new(filename, title: title)
     uploaded = client.upload(image)
     @url = uploaded.link
@@ -24,6 +23,10 @@ class ImgurGateway
 
   def image_title
     "Raindar #{Time.now.strftime('%A, %B %d, %Y')}"
+  end
+
+  def imgur_api_key
+    Lita.config.handlers.raindar.imgur_api_key
   end
 
 end
