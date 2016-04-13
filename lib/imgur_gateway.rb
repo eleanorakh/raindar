@@ -15,7 +15,8 @@ class ImgurGateway
     image = Imgur::LocalImage.new(filename, title: title)
     uploaded = client.upload(image)
     @url = uploaded.link
-  rescue
+  rescue Exception => e
+    puts "Error uploading to imgur #{e}"
     return false
   end
 
