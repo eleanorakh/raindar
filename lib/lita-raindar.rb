@@ -75,7 +75,7 @@ module Lita
       end
 
       def radar_locations(response)
-        response.reply(radar_list)
+        response.reply(radar_list.join(", "))
       end
 
       private
@@ -85,58 +85,9 @@ module Lita
       end
 
       def radar_list
-        list = """
-          Adelaide
-          Albany
-          Alice Springs
-          Bairnsdale
-          Bowen
-          Brisbane
-          Broome
-          Cairns
-          Canberra
-          Carnarvon
-          Ceduna
-          Dampier
-          Darwin
-          Emerald
-          Esperance
-          Geraldton
-          Giles
-          Gladstone
-          Gove
-          Grafton
-          Gulf of Carpentaria
-          Gympie
-          Halls Creek
-          Hobart
-          Kalgoorlie
-          Katherine
-          Learmonth
-          Longreach
-          Mackay
-          Melbourne
-          Mildura
-          Moree
-          Mount Isa
-          Mt Gambier
-          Namoi
-          Newcastle
-          Perth
-          Port Headland
-          Sydney
-          Townsville
-          Wagga Wagga
-          Warrego
-          Warruwi
-          Weipa
-          West Takone
-          Willis Island
-          Wollongong
-          Woomera
-          Wyndham
-          Yarrawonga
-        """
+        RADARS.keys.sort.map do |location|
+         location.capitalize
+       end
       end
 
       Lita.register_handler(self)
