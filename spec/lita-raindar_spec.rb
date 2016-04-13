@@ -16,6 +16,11 @@ describe Lita::Handlers::Raindar, lita_handler: true do
     it "responds to 'lita weather wagga wagga'" do
       expect(handler).to route("lita weather wagga wagga").to(:radar)
     end
+
+    it "responds to 'lita radar locations'" do
+      expect(handler).to route("lita radar locations").to(:radar_locations)
+    end
+
   end
 
   describe '.radar' do

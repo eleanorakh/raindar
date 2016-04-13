@@ -7,6 +7,7 @@ module Lita
       config :imgur_api_key
 
       route(/^weather ([a-zA-Z0-9\s]*)$/i, :radar, command: true, help: { "weather LOCATION" => "Returns GIF of recent weather radar" })
+      route(/^(radar locations)$/i, :radar_locations, command: true, help: { "radar locations" => "Returns list of available radar locations" })
 
       RADARS = {
         "melbourne" => "IDR023",
@@ -73,10 +74,69 @@ module Lita
 
       end
 
+      def radar_locations(response)
+        response.reply(radar_list)
+      end
+
       private
 
       def url_cache
         UrlCache.new(redis)
+      end
+
+      def radar_list
+        list = """
+          Adelaide
+          Albany
+          Alice Springs
+          Bairnsdale
+          Bowen
+          Brisbane
+          Broome
+          Cairns
+          Canberra
+          Carnarvon
+          Ceduna
+          Dampier
+          Darwin
+          Emerald
+          Esperance
+          Geraldton
+          Giles
+          Gladstone
+          Gove
+          Grafton
+          Gulf of Carpentaria
+          Gympie
+          Halls Creek
+          Hobart
+          Kalgoorlie
+          Katherine
+          Learmonth
+          Longreach
+          Mackay
+          Melbourne
+          Mildura
+          Moree
+          Mount Isa
+          Mt Gambier
+          Namoi
+          Newcastle
+          Perth
+          Port Headland
+          Sydney
+          Townsville
+          Wagga Wagga
+          Warrego
+          Warruwi
+          Weipa
+          West Takone
+          Willis Island
+          Wollongong
+          Woomera
+          Wyndham
+          Yarrawonga
+        """
       end
 
       Lita.register_handler(self)
