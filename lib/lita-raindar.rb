@@ -7,6 +7,7 @@ module Lita
       config :imgur_api_key
 
       route(/^weather ([a-zA-Z0-9\s]*)$/i, :radar, command: true, help: { "weather LOCATION" => "Returns GIF of recent weather radar" })
+      route(/^(radar locations)$/i, :radar_locations, command: true, help: { "radar locations" => "Returns list of available radar locations" })
 
       RADARS = {
         "melbourne" => "IDR023",
@@ -73,10 +74,20 @@ module Lita
 
       end
 
+      def radar_locations(response)
+        response.reply(radar_list.join(", "))
+      end
+
       private
 
       def url_cache
         UrlCache.new(redis)
+      end
+
+      def radar_list
+        RADARS.keys.sort.map do |location|
+         location.capitalize
+       end
       end
 
       Lita.register_handler(self)

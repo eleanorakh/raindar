@@ -33,6 +33,10 @@ Once the gem is installed and `imgur_api_key` set, the commands are as follows. 
 lita weather LOCATION
 ```
 
+To print a list of known locations:
+```
+lita radar locations
+```
 Locations are:
 
 ```
