@@ -29,7 +29,7 @@ class RadarGenerator
       temporary_radar_gif.unlink
       imgur_gateway.url
     else
-      'http://bit.ly/1OrtWKX'
+      'http://bit.ly/2oSZb0R'
     end
   end
 
