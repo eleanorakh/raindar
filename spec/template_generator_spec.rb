@@ -11,8 +11,9 @@ describe TemplateGenerator do
     end
 
     it 'generates a temporary template png file' do
-      expect(TemplateGenerator.template(radar_code)).to end_with('.png')
-      expect(TemplateGenerator.template(radar_code)).to include('temp_named_template')
+      expect(TemplateGenerator.template(radar_code)).to be_a(Tempfile)
+      expect(TemplateGenerator.template(radar_code).path).to end_with('.png')
+      expect(TemplateGenerator.template(radar_code).path).to include('temp_named_template')
     end
 
     it 'calls imagemagick correctly' do

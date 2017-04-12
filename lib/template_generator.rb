@@ -7,7 +7,7 @@ class TemplateGenerator
 
     system "convert -layers flatten #{background(radar_code)} #{topography(radar_code)} #{range(radar_code)} #{locations(radar_code)} #{temporary_template.path}"
 
-    temporary_template.path
+    temporary_template
 
   end
 
