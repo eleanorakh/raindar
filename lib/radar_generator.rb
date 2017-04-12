@@ -13,7 +13,7 @@ class RadarGenerator
     temporary_image_files = recent_image_filenames(radar_code).map do |radar_image|
       tempfile = Tempfile.new('composed')
 
-      system "convert -layers flatten #{template} #{raindar_url_for(radar_image)} #{tempfile.path}"
+      system "convert -layers flatten #{template.path} #{raindar_url_for(radar_image)} #{tempfile.path}"
       tempfile
     end
     composed_file_paths = temporary_image_files.map { |tempfile|
