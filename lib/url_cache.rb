@@ -1,5 +1,5 @@
 require 'redis'
-require_relative "radar_generator"
+require 'radar_generator'
 
 class UrlCache
   CACHE_EXPIRY = 300 # seconds
