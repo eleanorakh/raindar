@@ -1,4 +1,4 @@
-require "lita-raindar"
+require 'lita-raindar'
 
 describe Lita::Handlers::Raindar, lita_handler: true do
 

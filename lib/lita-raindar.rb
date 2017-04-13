@@ -1,4 +1,4 @@
-require "lita"
+require 'lita'
 require 'url_cache'
 
 module Lita
