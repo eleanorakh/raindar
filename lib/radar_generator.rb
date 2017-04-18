@@ -1,7 +1,7 @@
-require_relative 'imgur_gateway'
+require 'imgur_gateway'
 require 'json'
 require 'tempfile'
-require_relative 'template_generator'
+require 'template_generator'
 
 class RadarGenerator
   IMGUR_API_KEY = ENV['IMGUR_API_KEY']

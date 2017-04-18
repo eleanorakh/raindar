@@ -1,5 +1,5 @@
-require "lita"
-require_relative "url_cache"
+require 'lita'
+require 'url_cache'
 
 module Lita
   module Handlers
