@@ -1,10 +1,10 @@
-require 'radar_generator'
+require 'raindar/radar_generator'
 
-describe RadarGenerator do
+describe Raindar::RadarGenerator do
   describe '.gif' do
 
     let(:radar_code) { "radar_code" }
-    let(:mock_gateway) { instance_double(ImgurGateway, upload: true, url: 'http://_some_link_') }
+    let(:mock_gateway) { instance_double(Raindar::ImgurGateway, upload: true, url: 'http://_some_link_') }
     let(:json_data) {
 <<EOF
  {
@@ -22,14 +22,14 @@ EOF
         with(URI('http://m.bom.gov.au/radar/radar_code.T.filenames.json')).
         and_return(json_data)
 
-      allow(RadarGenerator).to receive(:system).with(anything) { true }
+      allow(Raindar::RadarGenerator).to receive(:system).with(anything) { true }
 
-      allow(ImgurGateway).to receive(:new).and_return(mock_gateway)
+      allow(Raindar::ImgurGateway).to receive(:new).and_return(mock_gateway)
 
     end
 
     it 'returns a imgur URL to the generated gif' do
-      expect(RadarGenerator.gif(radar_code)).to eq 'http://_some_link_'
+      expect(Raindar::RadarGenerator.gif(radar_code)).to eq 'http://_some_link_'
     end
 
   end
