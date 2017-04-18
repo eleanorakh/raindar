@@ -18,9 +18,9 @@ EOF
 
     before do
 
-      allow(HTTParty).to receive(:get).
-        with('http://m.bom.gov.au/radar/radar_code.T.filenames.json').
-        and_return double(response: double(body: json_data))
+      allow(Net::HTTP).to receive(:get).
+        with(URI('http://m.bom.gov.au/radar/radar_code.T.filenames.json')).
+        and_return(json_data)
 
       allow(RadarGenerator).to receive(:system).with(anything) { true }
 

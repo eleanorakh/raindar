@@ -1,4 +1,3 @@
-require 'httparty'
 require_relative 'imgur_gateway'
 require 'json'
 require 'tempfile'
@@ -48,7 +47,8 @@ class RadarGenerator
   end
 
   def self.most_recent_radar_image_json(radar_code)
-    HTTParty.get(raindar_image_json_url(radar_code)).response.body
+    uri = URI("#{raindar_image_json_url(radar_code)}")
+    Net::HTTP.get(uri)
   end
 
   def self.recent_image_filenames(radar_code)
