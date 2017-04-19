@@ -1,13 +1,13 @@
-require 'imgur_gateway'
+require 'raindar/imgur_gateway'
 
-describe ImgurGateway do
+describe Raindar::ImgurGateway do
 
   describe '#upload' do
 
     let(:upload) { double('Imgur::Upload', link: 'http://imgur.com/link.gif') }
 
     let(:attributes) { { filename: 'raindar.gif', title: 'New weather radar'} }
-    let(:imgur_gateway) { ImgurGateway.new(attributes) }
+    let(:imgur_gateway) { Raindar::ImgurGateway.new(attributes) }
 
     before do
       allow(Imgur).to receive(:new) { double('Imgur', upload: upload) }

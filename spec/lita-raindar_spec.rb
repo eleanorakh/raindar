@@ -1,4 +1,5 @@
 require 'lita-raindar'
+require 'raindar/url_cache'
 
 describe Lita::Handlers::Raindar, lita_handler: true do
 
@@ -26,10 +27,10 @@ describe Lita::Handlers::Raindar, lita_handler: true do
   describe '.radar' do
     let(:handler) { Lita::Handlers::Raindar.new(robot) }
     let(:location) { "lita weather melbourne" }
-    let(:url_cache) { instance_double(UrlCache, cached_radar_url: true ) }
+    let(:url_cache) { instance_double(::Raindar::UrlCache, cached_radar_url: true ) }
 
     before do
-      allow(UrlCache).to receive(:new) { url_cache }
+      allow(::Raindar::UrlCache).to receive(:new) { url_cache }
     end
 
     context 'when user requests Melbourne as downcase' do

@@ -1,5 +1,5 @@
 require 'lita'
-require 'url_cache'
+require 'raindar/url_cache'
 
 module Lita
   module Handlers
@@ -81,7 +81,7 @@ module Lita
       private
 
       def url_cache
-        UrlCache.new(redis)
+        ::Raindar::UrlCache.new(redis)
       end
 
       def radar_list
